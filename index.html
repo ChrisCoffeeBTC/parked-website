@@ -31,10 +31,8 @@
     --over-par-red: #FF3B30;
     --glow-green: rgba(45,107,45,0.4);
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg-dark);
@@ -42,7 +40,6 @@
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
-
   body::before {
     content: '';
     position: fixed;
@@ -52,8 +49,6 @@
     opacity: 0.025;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1rem 2rem;
@@ -62,9 +57,7 @@
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.04);
   }
-  .nav-brand {
-    display: flex; align-items: center; gap: 0.7rem; text-decoration: none;
-  }
+  .nav-brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
   .nav-brand img { width: 34px; height: 34px; border-radius: 8px; }
   .nav-brand span {
     font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700;
@@ -81,8 +74,6 @@
     padding: 0.5rem 1.1rem; border-radius: 8px; font-weight: 600 !important;
   }
   .nav-cta:hover { background: var(--brand-green-light) !important; }
-
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
@@ -150,17 +141,11 @@
     transition: all 0.3s;
   }
   .hero-sub-link:hover { color: var(--text-secondary); border-color: rgba(255,255,255,0.3); }
-
-  .hero-screenshot {
-    flex: 0 0 380px;
-    animation: fadeUp 0.8s ease 0.15s both;
-  }
+  .hero-screenshot { flex: 0 0 380px; animation: fadeUp 0.8s ease 0.15s both; }
   .hero-screenshot img {
     width: 100%; border-radius: 16px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 80px rgba(45,107,45,0.1);
   }
-
-  /* SHARED */
   .section-eyebrow {
     font-family: 'Outfit', sans-serif;
     font-size: 0.68rem; font-weight: 600; letter-spacing: 0.25em;
@@ -170,11 +155,7 @@
     width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, rgba(45,107,45,0.25), transparent);
   }
-
-  /* PARK JOB */
-  .park-job {
-    padding: 6rem 2rem; text-align: center;
-  }
+  .park-job { padding: 6rem 2rem; text-align: center; }
   .park-job h2 {
     font-family: 'Outfit', sans-serif;
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
@@ -199,8 +180,6 @@
     letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem;
   }
   .stat-div { width: 1px; height: 45px; background: rgba(255,255,255,0.08); }
-
-  /* FEATURES */
   .features { padding: 2rem 2rem 4rem; max-width: 1100px; margin: 0 auto; }
   .features-header { text-align: center; margin-bottom: 4rem; }
   .features-header h2 {
@@ -233,8 +212,6 @@
     width: 100%; max-width: 380px; border-radius: 12px;
     box-shadow: 0 16px 50px rgba(0,0,0,0.4);
   }
-
-  /* SCORECARD */
   .scorecard {
     padding: 6rem 2rem; text-align: center; background: var(--bg-card);
     border-top: 1px solid rgba(255,255,255,0.04);
@@ -254,11 +231,7 @@
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   }
   .scorecard-img img { width: 100%; display: block; }
-
-  /* FINAL CTA */
-  .final-cta {
-    padding: 8rem 2rem; text-align: center; position: relative;
-  }
+  .final-cta { padding: 8rem 2rem; text-align: center; position: relative; }
   .cta-glow {
     position: absolute; width: 500px; height: 500px; border-radius: 50%;
     background: radial-gradient(circle, var(--glow-green), transparent 70%);
@@ -275,8 +248,6 @@
     position: relative; z-index: 2;
   }
   .final-cta .app-store-btn { position: relative; z-index: 2; }
-
-  /* FOOTER */
   footer {
     padding: 2.5rem 2rem;
     border-top: 1px solid rgba(255,255,255,0.04);
@@ -295,15 +266,11 @@
     transition: color 0.3s;
   }
   .footer-links a:hover { color: var(--text-secondary); }
-
-  /* ANIMATIONS */
   .fade-in {
     opacity: 0; transform: translateY(20px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     .hero-inner { flex-direction: column; text-align: center; }
     .hero-text p { margin-left: auto; margin-right: auto; }
@@ -341,7 +308,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#scorecard">Scorecards</a></li>
     <li><a href="https://chriscoffee.github.io/parked-disc-golf-privacy/" target="_blank">Privacy</a></li>
-    <li><a href="#download" class="nav-cta">Download</a></li>
+    <li><a href="https://apps.apple.com/us/app/parked-disc-golf/id6759809071" class="nav-cta">Download</a></li>
   </ul>
 </nav>
 
@@ -353,7 +320,7 @@
       <h1>Score your rounds.<br><span class="green">Track your park jobs.</span><br>Level up your game.</h1>
       <p>Parked is a free disc golf scorekeeping app with a twist: it tracks your park jobs. Keep score, monitor your stats, earn XP, share branded scorecards, and see exactly how your game is improving.</p>
       <div class="hero-actions">
-        <a href="#download" class="app-store-btn">
+        <a href="https://apps.apple.com/us/app/parked-disc-golf/id6759809071" class="app-store-btn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           Download for iOS
         </a>
@@ -474,7 +441,7 @@
   <div class="cta-glow"></div>
   <h2>Ready to track<br>your park jobs?</h2>
   <p>100% free. No paywall, no catch. Just better scorekeeping for disc golf.</p>
-  <a href="#" class="app-store-btn">
+  <a href="https://apps.apple.com/us/app/parked-disc-golf/id6759809071" class="app-store-btn">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
     Download for iOS
   </a>
@@ -503,3 +470,4 @@
 
 </body>
 </html>
+
