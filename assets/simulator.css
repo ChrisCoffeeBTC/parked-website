@@ -1,0 +1,50 @@
+/* Page-specific styling; the existing flight model and controls are unchanged. */
+:root {
+  --bg: #091710;
+  --surface: #172e22;
+  --ink: #f2f0e5;
+  --muted: #bbc8b4;
+  --line: #344b3b;
+  --parked: #b9e48c;
+  --parked-dark: #b9e48c;
+  --parked-tint: #203b28;
+  --pin: #f6b562;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+#flight-sim { max-width: 1200px; width: calc(100% - 80px); padding: 60px 0 80px; }
+.sim-eyebrow { color: var(--green); }
+.sim-title { font-size: clamp(2.6rem, 5vw, 4rem); letter-spacing: -.045em; }
+.sim-sub { font-size: 1rem; max-width: 680px; line-height: 1.8; margin-bottom: 36px; }
+.sim-grid { grid-template-columns: 340px 1fr; gap: 28px; }
+.panel { padding: 24px; }
+.panel h2 { font-size: 1.5rem; margin-bottom: 20px; }
+.presets button { font-size: .86rem; min-height: 44px; padding: 9px 13px; }
+.ctl-row { font-size: .94rem; margin-bottom: 0; }
+input[type="range"] { min-height: 32px; margin-block: 0; }
+.btn { min-height: 48px; font-size: .94rem; }
+.btn-throw { background: var(--green); border-color: var(--green); }
+.btn-throw:hover { background: #cdf2a8; }
+.stats { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.stat { padding: 14px; }
+.stat p { font-size: .8rem; margin-bottom: 7px; }
+.stat strong { font-size: 1.4rem; }
+.banner { background: var(--green); color: var(--deep); }
+.cta { border-color: #657e51; padding: 28px; gap: 22px; }
+.cta p { color: var(--sage); font-size: .94rem; margin-top: 10px; max-width: 630px; }
+.cta h3 { color: var(--cream); font-size: 1.5rem; }
+.cta a { min-height: 48px; background: var(--green); color: var(--deep); }
+.site-footer { border-top: 1px solid var(--line); }
+@media (max-width: 900px) {
+  #flight-sim { width: calc(100% - 48px); padding-top: 42px; }
+  .sim-grid { grid-template-columns: 1fr; }
+  .presets { gap: 8px; }
+  .ctl { margin-bottom: 12px; }
+}
+@media (max-width: 640px) {
+  #flight-sim { width: calc(100% - 40px); padding: 34px 0 60px; }
+  .panel { padding: 20px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .cta { padding: 22px; }
+  .cta a { width: 100%; text-align: center; }
+}
